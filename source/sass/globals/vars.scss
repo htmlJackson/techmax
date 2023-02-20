@@ -1,0 +1,25 @@
+$container: 1700px;
+$container-md: 1190px;
+$container-sm: 720px;
+$container-xs: 375px;
+
+$breakpoint-md: $container - 1px; // 1599px
+$breakpoint-sm: $container-md - 1px; // 1279px
+$breakpoint-xsm: 1024px - 1px; // 1023px
+$breakpoint-xs: $container-sm - 1px; // 767px
+$breakpoint-xxs: $container-xs - 1px; // 374px
+
+
+$light: #DFE4E0;
+$gray: #B9B9B9;
+$graybg: #EFF3F5;
+$graydark: #828282;
+
+$black: #000000;
+$white: #FFFFFF;
+$red: #DB1D1E;
+$red-hover: rgb(207, 45, 35);
+$red-active: rgb(179, 45, 35);
+
+$lightblue: #DFE9F0;
+$blue: #CED9E3;
