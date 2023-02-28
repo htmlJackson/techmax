@@ -15,7 +15,8 @@ function swiperCard() {
       });
     }
   } else if (init) {
-    swiper.destroy();
+    const sliders = document.querySelectorAll(".swiper");
+    sliders.forEach((slider) => slider.swiper.destroy());
     init = false;
   }
 }
@@ -25,7 +26,4 @@ window.addEventListener("resize", swiperCard);
 const toggle = document.querySelector(".header__toggle");
 const nav = document.querySelector(".nav");
 
-toggle.addEventListener("click", () => {
-  console.log("clicked");
-  nav.classList.toggle("hidden");
-});
+toggle.addEventListener("click", () => nav.classList.toggle("hidden"));
