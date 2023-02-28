@@ -165,7 +165,6 @@ p {
   @media (max-width: $mobile) {
     background-position: bottom;
   }
-
 }
 
 .container {
@@ -421,7 +420,7 @@ p {
   }
 }
 
-.cards-list {
+.swiper-wrapper.cards-list, .cards-list {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 340px);
@@ -443,6 +442,11 @@ p {
   &_notes {
     grid-template-columns: repeat(4, 230px);
     row-gap: 60px;
+  }
+}
+.swiper-wrapper.cards-list {
+  @media (max-width: $tablet) {
+    display: flex;
   }
 }
 
@@ -586,31 +590,38 @@ p {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.swiper {
-  width: 340px;
+div.swiper-button-prev, div.swiper-button-next {
+  display: none;
 }
 
-.swiper .cards-list {
-  justify-content: start;
-}
+@media (max-width: $mobile) {
+  .swiper {
+    width: 340px;
+  }
 
-.swiper-wrapper .card {
-  display: block;
-}
+  .swiper .cards-list {
+    justify-content: start;
+  }
 
-.swiper-button-prev {
-  transform: rotate(180deg);
-}
+  .swiper-wrapper .card {
+    display: block;
+  }
 
-div.swiper-button-prev,
-div.swiper-button-next {
-  width: 36px;
-  height: 36px;
-  background-image: url(../../img/arrow.svg);
-  background-position: cover;
-  background-repeat: no-repeat;
-  &::after {
-    display: none;
+  .swiper-button-prev {
+    transform: rotate(180deg);
+  }
+
+  div.swiper-button-prev,
+  div.swiper-button-next {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url(../../img/arrow.svg);
+    background-position: cover;
+    background-repeat: no-repeat;
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -640,9 +651,9 @@ div.swiper-button-next {
     position: absolute;
     width: 100%;
     background-color: #fff;
-    border-top: 1px solid #DFE4E0;
+    border-top: 1px solid #dfe4e0;
   }
-  
+
   &.hidden {
     display: none;
   }
@@ -663,10 +674,10 @@ div.swiper-button-next {
   line-height: 20px;
   text-transform: uppercase;
   transition: all 0.3s;
-  border-bottom: 1px solid #C6C6C6;
+  border-bottom: 1px solid #c6c6c6;
 
   &:hover {
-    color: #F49725;
+    color: #f49725;
   }
 }
 
