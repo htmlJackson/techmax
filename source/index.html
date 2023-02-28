@@ -27,7 +27,23 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <img src="img/logo.png" alt="Tech-Max" class="logo" />
+        <button class="header__toggle" type="button">
+          <svg
+            width="32"
+            height="14"
+            viewBox="0 0 32 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect y="12" width="32" height="2" fill="white" />
+            <rect y="6" width="32" height="2" fill="white" />
+            <rect width="32" height="2" fill="white" />
+          </svg>
+
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+
+        <img src="img/logo.svg" alt="Tech-Max" class="logo" />
 
         <p class="header__schredule">
           11:00-19:30<br />
@@ -45,48 +61,30 @@
           <a href="tel:+79045581300" class="phone__anchor">+7(904) 558 13 00</a>
         </div>
 
-        <!-- <nav class="nav">
-          <ul class="nav__ul">
-            <li class="nav__li">
-              <a href="#" class="nav__anchor">Где нас найти</a>
-            </li>
-            <li class="nav__li">
-              <a href="#" class="nav__anchor">Где нас найти</a>
-            </li>
-            <li class="nav__li">
-              <a href="#" class="nav__anchor">Где нас найти</a>
-            </li>
-          </ul>
-        </nav> -->
 
-        <!-- <div class="header__right">
-          <button class="header__toggle" type="button">
-            <svg
-              class="header__toggle-icon header__toggle-icon--burger"
-              width="33"
-              height="33"
-              viewBox="0 0 33 33"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M31.7109 15.2109H1.28906C0.577113 15.2109 0 15.7881 0 16.5C0 17.2119 0.577113 17.7891 1.28906 17.7891H31.7109C32.4229 17.7891 33 17.2119 33 16.5C33 15.7881 32.4229 15.2109 31.7109 15.2109Z"
-                fill="#DF393A"
-              />
-              <path
-                d="M31.7109 4.89844H1.28906C0.577113 4.89844 0 5.47555 0 6.1875C0 6.89945 0.577113 7.47656 1.28906 7.47656H31.7109C32.4229 7.47656 33 6.89945 33 6.1875C33 5.47555 32.4229 4.89844 31.7109 4.89844Z"
-                fill="#DF393A"
-              />
-              <path
-                d="M31.7109 25.5234H1.28906C0.577113 25.5234 0 26.1006 0 26.8125C0 27.5244 0.577113 28.1016 1.28906 28.1016H31.7109C32.4229 28.1016 33 27.5244 33 26.8125C33 26.1006 32.4229 25.5234 31.7109 25.5234Z"
-                fill="#DF393A"
-              />
-            </svg>
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </div> -->
       </div>
     </header>
+
+    <nav class="nav hidden">
+      <div class="phone">
+        <img src="img/wa.svg" alt="" />
+        <img src="img/vb.svg" alt="" />
+        <a href="tel:+79045581300" class="phone__anchor"
+          >+7(904) 558 13 00</a
+        >
+      </div>
+      <ul class="nav__ul">
+        <li class="nav__li">
+          <a href="#" class="nav__anchor">Где нас найти</a>
+        </li>
+        <li class="nav__li">
+          <a href="#" class="nav__anchor">Где нас найти</a>
+        </li>
+        <li class="nav__li">
+          <a href="#" class="nav__anchor">Где нас найти</a>
+        </li>
+      </ul>
+    </nav>
 
     <main class="main">
       <section class="promo">
@@ -97,15 +95,14 @@
             <a href="#repair" class="promo__btn">РЕМОНТ ТЕХНИКИ</a>
             <div class="promo__btns-row">
               <a href="#buy" class="promo__btn">СКУПКА ТЕХНИКИ</a>
-              <a href="#tech"class="promo__btn">
-                ПРОДАЖА Б\У ТЕХНКИИ
-              </a>
+              <a href="#tech" class="promo__btn"> ПРОДАЖА Б\У ТЕХНКИИ </a>
             </div>
           </div>
 
           <p class="promo__descr">
-            Сервис центр techmax в СПБ. Оказываем профессиональные услуги по
-            обслуживанию и ремонту цифровой техники более 10 лет!
+            <b>Сервис центр techmax в СПБ.</b><br />Оказываем профессиональные
+            услуги по обслуживанию и ремонту цифровой техники
+            <b>более 10 лет!</b>
           </p>
         </div>
       </section>
@@ -232,37 +229,42 @@
             <b>в любом виде и состоянии</b>
           </p>
 
-          <div class="cards-list cards-list_four">
-            <div class="card card_transparent">
-              <img src="img/img7.png" alt="" />
-              <h3 class="h3">Продать Б/У телефон</h3>
-              <p class="text">Скупка смартфонов, бывших в употреблении.</p>
-            </div>
+          <div class="swiper">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
-            <div class="card card_transparent">
-              <img src="img/img8.png" alt="" />
-              <h3 class="h3">Скупка новых смартфонов</h3>
-              <p class="text">
-                Нам можно предложить новый телефон, находящийся на гарантии,
-                только взятый из салона.
-              </p>
-            </div>
+            <div class="cards-list cards-list_four swiper-wrapper">
+              <div class="card card_transparent swiper-slide">
+                <img src="img/img7.png" alt="" />
+                <h3 class="h3">Продать Б/У телефон</h3>
+                <p class="text">Скупка смартфонов, бывших в употреблении.</p>
+              </div>
 
-            <div class="card card_transparent">
-              <img src="img/img9.png" alt="" />
-              <h3 class="h3">Продать разбитый телефон</h3>
-              <p class="text">
-                Скупка аппаратов с разбитыми дисплеями или неисправностями
-                другого вида.
-              </p>
-            </div>
+              <div class="card card_transparent swiper-slide">
+                <img src="img/img8.png" alt="" />
+                <h3 class="h3">Скупка новых смартфонов</h3>
+                <p class="text">
+                  Нам можно предложить новый телефон, находящийся на гарантии,
+                  только взятый из салона.
+                </p>
+              </div>
 
-            <div class="card card_transparent">
-              <img src="img/img10.png" alt="" />
-              <h3 class="h3">Сдать телефон на запчасти</h3>
-              <p class="text">
-                Продать девайс, не подлежащий восстановлению по запчастям.
-              </p>
+              <div class="card card_transparent swiper-slide">
+                <img src="img/img9.png" alt="" />
+                <h3 class="h3">Продать разбитый телефон</h3>
+                <p class="text">
+                  Скупка аппаратов с разбитыми дисплеями или неисправностями
+                  другого вида.
+                </p>
+              </div>
+
+              <div class="card card_transparent swiper-slide">
+                <img src="img/img10.png" alt="" />
+                <h3 class="h3">Сдать телефон на запчасти</h3>
+                <p class="text">
+                  Продать девайс, не подлежащий восстановлению по запчастям.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -276,34 +278,38 @@
             <b>в любом виде и состоянии</b>
           </p>
 
-          <div class="cards-list cards-list_four">
-            <div class="card">
-              <img src="img/img11.png" alt="" />
-              <h3 class="h3">Продать Б/У ноутбук</h3>
-              <p class="text">Скупка ноутбуков, бывших в употреблении.</p>
-            </div>
+          <div class="swiper">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="cards-list cards-list_four swiper-wrapper">
+              <div class="card swiper-slide">
+                <img src="img/img11.png" alt="" />
+                <h3 class="h3">Продать Б/У ноутбук</h3>
+                <p class="text">Скупка ноутбуков, бывших в употреблении.</p>
+              </div>
 
-            <div class="card">
-              <img src="img/img12.png" alt="" />
-              <h3 class="h3">Скупка новых ноутбуков</h3>
-              <p class="text">Нам можно предложить новый ноутбук.</p>
-            </div>
+              <div class="card swiper-slide">
+                <img src="img/img12.png" alt="" />
+                <h3 class="h3">Скупка новых ноутбуков</h3>
+                <p class="text">Нам можно предложить новый ноутбук.</p>
+              </div>
 
-            <div class="card">
-              <img src="img/img13.png" alt="" />
-              <h3 class="h3">Продать разбитый ноутбуков</h3>
-              <p class="text">
-                Скупка аппаратов с разбитыми дисплеями, матрицами или
-                неисправностями другого вида.
-              </p>
-            </div>
+              <div class="card swiper-slide">
+                <img src="img/img13.png" alt="" />
+                <h3 class="h3">Продать разбитый ноутбуков</h3>
+                <p class="text">
+                  Скупка аппаратов с разбитыми дисплеями, матрицами или
+                  неисправностями другого вида.
+                </p>
+              </div>
 
-            <div class="card">
-              <img src="img/img14.png" alt="" />
-              <h3 class="h3">Сдать телефон на запчасти</h3>
-              <p class="text">
-                Продать девайс, не подлежащий восстановлению по запчастям.
-              </p>
+              <div class="card swiper-slide">
+                <img src="img/img14.png" alt="" />
+                <h3 class="h3">Сдать телефон на запчасти</h3>
+                <p class="text">
+                  Продать девайс, не подлежащий восстановлению по запчастям.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -313,53 +319,58 @@
         <div class="container">
           <h2 class="h2">Продажа БУ техники</h2>
 
-          <div class="cards-list cards-list_notes">
-            <div class="card card_notebook">
-              <img src="img/notebook.jpg" alt="" />
-              <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
-              <p class="price-info">71 999 руб.</p>
-            </div>
+          <div class="swiper">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
 
-            <div class="card card_notebook">
-              <img src="img/notebook.jpg" alt="" />
-              <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
-              <p class="price-info">71 999 руб.</p>
-            </div>
+            <div class="cards-list cards-list_notes swiper-wrapper">
+              <div class="card card_notebook swiper-slide">
+                <img src="img/notebook.jpg" alt="" />
+                <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
+                <p class="price-info">71 999 руб.</p>
+              </div>
 
-            <div class="card card_notebook">
-              <img src="img/notebook.jpg" alt="" />
-              <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
-              <p class="price-info">71 999 руб.</p>
-            </div>
+              <div class="card card_notebook swiper-slide">
+                <img src="img/notebook.jpg" alt="" />
+                <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
+                <p class="price-info">71 999 руб.</p>
+              </div>
 
-            <div class="card card_notebook">
-              <img src="img/notebook.jpg" alt="" />
-              <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
-              <p class="price-info">71 999 руб.</p>
-            </div>
+              <div class="card card_notebook swiper-slide">
+                <img src="img/notebook.jpg" alt="" />
+                <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
+                <p class="price-info">71 999 руб.</p>
+              </div>
 
-            <div class="card card_notebook">
-              <img src="img/notebook.jpg" alt="" />
-              <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
-              <p class="price-info">71 999 руб.</p>
-            </div>
+              <div class="card card_notebook swiper-slide">
+                <img src="img/notebook.jpg" alt="" />
+                <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
+                <p class="price-info">71 999 руб.</p>
+              </div>
 
-            <div class="card card_notebook">
-              <img src="img/notebook.jpg" alt="" />
-              <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
-              <p class="price-info">71 999 руб.</p>
-            </div>
+              <div class="card card_notebook swiper-slide">
+                <img src="img/notebook.jpg" alt="" />
+                <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
+                <p class="price-info">71 999 руб.</p>
+              </div>
 
-            <div class="card card_notebook">
-              <img src="img/notebook.jpg" alt="" />
-              <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
-              <p class="price-info">71 999 руб.</p>
-            </div>
+              <div class="card card_notebook swiper-slide">
+                <img src="img/notebook.jpg" alt="" />
+                <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
+                <p class="price-info">71 999 руб.</p>
+              </div>
 
-            <div class="card card_notebook">
-              <img src="img/notebook.jpg" alt="" />
-              <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
-              <p class="price-info">71 999 руб.</p>
+              <div class="card card_notebook swiper-slide">
+                <img src="img/notebook.jpg" alt="" />
+                <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
+                <p class="price-info">71 999 руб.</p>
+              </div>
+
+              <div class="card card_notebook swiper-slide">
+                <img src="img/notebook.jpg" alt="" />
+                <h3 class="h3">Игровой ноутбук ASUS FX506HCB-US51</h3>
+                <p class="price-info">71 999 руб.</p>
+              </div>
             </div>
           </div>
         </div>

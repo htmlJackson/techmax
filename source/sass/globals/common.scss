@@ -48,6 +48,19 @@ p {
     font-weight: 800;
     display: block;
   }
+
+  @media (max-width: $tablet) {
+    width: 540px;
+    margin: 0 auto;
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 61px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 30px;
+    line-height: 47px;
+  }
 }
 
 .h2 {
@@ -78,13 +91,9 @@ p {
     margin-left: 35px;
   }
 
-  @media (max-width: $breakpoint-md) {
-  }
-
-  @media (max-width: $breakpoint-sm) {
-  }
-
-  @media (max-width: $breakpoint-xs) {
+  @media (max-width: $mobile) {
+    font-size: 24px;
+    line-height: 33px;
   }
 }
 
@@ -98,11 +107,30 @@ p {
 
 .section {
   padding-top: 100px;
+
+  @media (max-width: $tablet) {
+    padding-top: 80px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 40px;
+  }
+
   &_gray,
   &_orange {
     margin-top: 100px;
     background: rgba(217, 217, 217, 0.2);
     padding-bottom: 100px;
+
+    @media (max-width: $tablet) {
+      margin-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &_orange {
@@ -112,6 +140,10 @@ p {
 
   &.tech {
     padding-bottom: 100px;
+
+    @media (max-width: $mobile) {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -121,14 +153,19 @@ p {
 
 .logo {
   display: flex;
-  @media (max-width: $breakpoint-sm) {
-    max-width: 200px;
+
+  @media (max-width: $mobile) {
+    max-height: 34px;
   }
 }
 
 .promo {
   background: #000 url(../../img/bg.jpg) no-repeat;
   background-size: cover;
+  @media (max-width: $mobile) {
+    background-position: bottom;
+  }
+
 }
 
 .container {
@@ -136,6 +173,10 @@ p {
   width: 1250px;
   max-width: 100%;
   padding: 0 15px;
+
+  @media (max-width: $tablet) {
+    width: 710px;
+  }
 }
 
 .logo {
@@ -147,11 +188,24 @@ p {
   display: flex;
   align-items: center;
   min-height: 80px;
+  @media (max-width: $tablet) {
+    width: 710px;
+  }
+  @media (max-width: $mobile) {
+    min-height: 60px;
+    padding: 0;
+  }
 }
 
 .header__schredule {
   font-weight: 700;
   margin-left: 25px;
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 10px;
+  }
 }
 
 .header__anchor {
@@ -164,8 +218,13 @@ p {
   color: #dc7900;
   font-weight: 700;
   cursor: pointer;
+
   img {
     margin-right: 7px;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
   }
 }
 
@@ -183,6 +242,19 @@ p {
   img {
     margin-right: 7px;
   }
+
+  @media (max-width: $tablet) {
+    margin-left: auto;
+  }
+  @media (max-width: $mobile) {
+    margin-left: 0;
+  }
+}
+
+.header .phone {
+  @media (max-width: $mobile) {
+    display: none;
+  }
 }
 
 .promo__content {
@@ -192,13 +264,23 @@ p {
   padding-top: 90px;
   padding-bottom: 100px;
   text-align: center;
+
+  @media (max-width: $tablet) {
+    padding: 40px 0 60px;
+  }
 }
 
 .promo__subtitle {
   font-weight: 700;
   font-size: 32px;
+  line-height: 40px;
   color: #ffffff;
   text-transform: uppercase;
+
+  @media (max-width: $mobile) {
+    font-size: 24px;
+    line-height: 35px;
+  }
 }
 
 .promo__btn {
@@ -226,8 +308,13 @@ p {
   flex-direction: column;
   align-items: center;
   width: 570px;
+  max-width: 100%;
   flex-wrap: wrap;
   margin: 45px auto;
+
+  @media (max-width: $mobile) {
+    align-items: center;
+  }
 }
 
 .promo__btns-row {
@@ -235,13 +322,35 @@ p {
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
 .promo__descr {
-  font-weight: 700;
   font-size: 21px;
   line-height: 36px;
   color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+
+  b {
+    font-weight: 700;
+  }
+
+  @media (max-width: $tablet) {
+    width: 650px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
 .about__list {
@@ -252,6 +361,15 @@ p {
 
   li:not(:last-child) {
     margin-bottom: 15px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    margin-left: 15px;
   }
 }
 
@@ -309,8 +427,17 @@ p {
   grid-template-columns: repeat(3, 340px);
   justify-content: space-between;
 
+  @media (max-width: $tablet) {
+    grid-template-columns: 340px;
+    row-gap: 45px;
+    justify-content: center;
+  }
+
   &_four {
     grid-template-columns: repeat(4, 250px);
+    @media (max-width: $tablet) {
+      display: block;
+    }
   }
 
   &_notes {
@@ -333,6 +460,21 @@ p {
   th {
     text-align: left;
   }
+
+  td:last-child {
+    font-weight: bold;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+
+    td {
+      padding-right: 10px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
 }
 
 .price-info {
@@ -349,8 +491,13 @@ p {
   padding: 0 11px;
 
   text-align: center;
-}
 
+  @media (max-width: $tablet) {
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .footer {
   background: #333333;
@@ -365,11 +512,34 @@ p {
   display: flex;
   justify-content: space-between;
   padding: 25px 0;
+
+  @media (max-width: $mobile) {
+    flex-direction: column-reverse;
+  }
 }
 
 .footer__left {
   width: 490px;
   max-width: 100%;
+
+  @media (max-width: $tablet) {
+    width: 340px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.map iframe {
+  @media (max-width: $tablet) {
+    height: 290px;
+    width: 320px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
 }
 
 .footer__adress {
@@ -378,6 +548,13 @@ p {
   margin-bottom: 30px;
   img {
     margin-right: 10px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 40px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 
@@ -389,6 +566,17 @@ p {
 .footer .phone__anchor {
   margin-left: 7px;
   color: #fff;
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+
+  @media (max-width: $mobile) {
+    font-weight: 600;
+    font-size: 20px;
+  }
 }
 
 .footer__bottom {
@@ -396,4 +584,92 @@ p {
   text-align: center;
   color: #fff;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.swiper {
+  width: 340px;
+}
+
+.swiper .cards-list {
+  justify-content: start;
+}
+
+.swiper-wrapper .card {
+  display: block;
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+}
+
+div.swiper-button-prev,
+div.swiper-button-next {
+  width: 36px;
+  height: 36px;
+  background-image: url(../../img/arrow.svg);
+  background-position: cover;
+  background-repeat: no-repeat;
+  &::after {
+    display: none;
+  }
+}
+
+.header__toggle {
+  display: none;
+  @media (max-width: $mobile) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: #f49725;
+    border: none;
+    margin-right: 10px;
+  }
+}
+
+.nav {
+  display: none;
+
+  @media (max-width: $mobile) {
+    padding-top: 28px;
+    padding-left: 14px;
+    padding-right: 14px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #DFE4E0;
+  }
+  
+  &.hidden {
+    display: none;
+  }
+}
+
+.nav__ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.nav__anchor {
+  display: flex;
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border-bottom: 1px solid #C6C6C6;
+
+  &:hover {
+    color: #F49725;
+  }
+}
+
+.nav__li:last-child .nav__anchor {
+  border-bottom: none;
 }
